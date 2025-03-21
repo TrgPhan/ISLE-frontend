@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -19,25 +20,26 @@ const Navbar = () => {
                     style={{ width: '357px', height: '52px' }}>
                     <nav className="flex items-center gap-[48px]">
                         {/* About Us */}
-                        <a href="/about" className="text-gray-700 hover:text-black py-[11px] w-fit">
+                        <Link href="/about" className="text-gray-700 hover:text-black py-[11px] w-fit">
                             About Us
-                        </a>
+                        </Link>
 
                         {/* Contact */}
-                        <a href="#" className="text-gray-700 hover:text-black py-[11px] w-fit">
+                        <Link href="#" className="text-gray-700 hover:text-black py-[11px] w-fit">
                             Contact
-                        </a>
+                        </Link>
 
                         {/* Login Button */}
-                        <button className="bg-black hover:bg-[#1A1A1A] text-white rounded-lg shadow-md px-6 h-[52px] w-fit transition-all">
-                            <a href="/login">
-                                Log In
-                            </a>
+                        <button className="bg-black hover:bg-[#F7F7F7] text-white hover:text-black rounded-lg shadow-md px-6 h-[52px] w-fit transition-all">
+                            <Link href="/login">
+                                Sign In
+                            </Link>
                         </button>
                     </nav>
                 </div>
             </div>
-        </header>
+        </header >
     )
 };
+
 export default Navbar;

@@ -27,8 +27,11 @@ export default function HomePage() {
           <span className="absolute top-[110px] left-[0px] w-[874px] h-[72px] text-[24px] text-black align-left align-middle opacity-50">
             Hello, UETERS! This is ISLE, an advanced platform that uses AI to accurately recognize hand signs, making communication more accessible and inclusive.
           </span>
-          <button className="absolute top-[213px] left-[0px] w-[180px] h-[76px] bg-black hover:bg-[#1A1A1A] text-white rounded-lg shadow-md px-6 transition-all text-[24px]"
-          >Start Now</button>
+          <button className="absolute top-[213px] left-[0px] w-[180px] h-[76px] bg-black hover:bg-[#F7F7F7] text-white hover:text-black rounded-lg shadow-md px-6 transition-all text-[24px]">
+            <a href="/login">
+              Start Now
+            </a>
+          </button>
         </div>
       </section>
 
@@ -132,14 +135,18 @@ export default function HomePage() {
           </div>
 
           <div className="absolute top-[633px] w-[516px] h-[388px] align-left align-down">
-            <button className="absolute top-[0px] left-[0px] w-[164px] h-[60px] bg-black hover:bg-[#1A1A1A] text-white rounded-lg shadow-md px-6 transition-all text-[24px]">
+            <button className="absolute top-[0px] left-[0px] w-[164px] h-[60px] bg-black hover:bg-[#F7F7F7] text-white hover:text-black rounded-lg shadow-md px-6 transition-all text-[24px]">
               <a href="/login">
                 Start Now
               </a>
             </button>
 
-            <button className="absolute top-[0px] left-[172px] w-[138px] h-[60px] bg-[#E6E6E6] text-black rounded-lg shadow-md px-6 transition-all text-[24px] hover:bg-[#D9D9D9]"
-            >Sign Up</button>
+            <button className="absolute top-[0px] left-[172px] w-[138px] h-[60px] bg-[#E6E6E6] text-black rounded-lg shadow-md px-6 transition-all text-[24px] hover:bg-[#15186D] hover:text-white"
+            >
+              <a href="/signup">
+                Sign Up
+              </a>
+            </button>
           </div>
         </div>
 
@@ -188,7 +195,7 @@ export default function HomePage() {
 
         <div className="absolute top-[106px] left-[437.33px] w-[1280px] h-[198px] gap-[32px] horizontal-layout">
           <div className="absolute top-[0px] left-[0px] w-[405px] h-[198px] gap-[48px] vertical-layout border-2 border-gray-200 rounded-[10px]">
-            <span className="absolute top-[32px] left-[32px] w-[341.33px] h-[36px] text-[24px] text-black align-left align-top"
+            <span className="absolute top-[32px] left-[32px] w-[370px] h-[36px] text-[24px] text-black align-left align-top"
               style={{ fontWeight: 500 }}>
               “Lingang guli guli wa cha ling”
             </span>
@@ -251,10 +258,12 @@ export default function HomePage() {
         </span>
 
         <div className="absolute top-[80px] left-[885px] w-[490px] h-[76px] gap-[24px] vertical-layout align-top">
-          <button className="absolute top-[0px] left-[0px] w-[134px] h-[76px] bg-black hover:bg-[#1A1A1A] text-white rounded-lg shadow-md px-6 transition-all text-[24px]"
-          >Log In</button>
-          <button className="absolute top-[0px] left-[158px] w-[332px] h-[76px] bg-[#E6E6E6] text-black rounded-lg shadow-md px-6 transition-all text-[24px] hover:bg-[#D9D9D9]"
-          >Our Github Project Link</button>
+          <button className="absolute top-[0px] left-[0px] w-[134px] h-[76px] bg-black hover:bg-[#F7F7F7] text-white hover:text-black rounded-lg shadow-md px-6 transition-all text-[24px]"
+          >
+            <a href='login'>Sign In</a>
+          </button>
+          <button className="absolute top-[0px] left-[158px] w-[332px] h-[76px] bg-[#E6E6E6] text-black rounded-lg shadow-md px-6 transition-all text-[24px] hover:bg-[#15186D] hover:text-white">
+            Our Github Project Link</button>
         </div>
       </section>
 

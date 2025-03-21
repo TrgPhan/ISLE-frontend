@@ -13,18 +13,18 @@ const Footer = () => {
                     style={{ fontWeight: 500 }}>
                     OUR WORLD
                 </span>
-                <span className="absolute top-[48px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50">
+                <span className="absolute top-[48px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50 hover:opacity-80">
                     About Us
                 </span>
-                <span className="absolute top-[96px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50">
+                <span className="absolute top-[96px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50 hover:opacity-80">
                     Contact
                 </span>
-                <span className="absolute top-[144px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50">
+                <span className="absolute top-[144px] left-[0px] w-[187px] h-[24px] text-[16px] text-black align-left align-top opacity-50 hover:opacity-80">
                     Github
                 </span>
             </div>
 
-            <div className="absolute top-[176px] left-[80px] w-[184px] h-[40px]">
+            <div className="absolute top-[176px] left-[70px] w-[184px] h-[40px]">
                 <Image className="absolute top-[0px] left-[0px] grayscale opacity-75"
                     src="/facebook.jpg"
                     alt="Facebook Logo"
