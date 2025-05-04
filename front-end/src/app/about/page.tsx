@@ -2,7 +2,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { useState } from "react";
 
 
 
@@ -14,11 +13,12 @@ const AboutPage = () => {
             <Navbar />
 
             {/* About Us */}
-            <section className="absolute top-[244px] left-[90px] w-[1282px] h-[2343px]">
+            <section className="relative top-[94px] left-[90px] w-[1282px] h-[2343px]">
                 <span className="absolute top-[0px] left-[0px] text-black w-[1282px] h-[77px]"
                     style={{ fontSize: "64px", fontWeight: 700 }}>
                     About Us
                 </span>
+
                 <div className="absolute top-[157px] left-[0px] w-[1282px] h-[617px]">
                     <Image className="absolute top-[25px] left-[661px] bg-gray-300 rounded-lg"
                         src="/Pham Nhat Quang.png"

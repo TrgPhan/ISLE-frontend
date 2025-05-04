@@ -1,16 +1,7 @@
 import Image from "next/image";
 import '@fontsource/inter'
-import localFont from 'next/font/local';
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-
-const Monotes = localFont({
-  src: 'fonts/Monotes.ttf',
-});
-
-const Impact = localFont({
-  src: 'fonts/UTM-Impact.ttf',
-});
 
 export default function HomePage() {
   return (
@@ -46,7 +37,7 @@ export default function HomePage() {
       <section className="relative top-[260px] left-[90px] w-[1279px] h-[647px] gap-[48px]">
         <span className="absolute top-[0px] left-[0px] w-[624px] h-[58px] text-[48px] text-bold align-left align-top"
           style={{ fontWeight: 600, letterSpacing: '-2%' }}>
-          We're focused on
+          We&apos;re focused on
         </span>
         <section className="absolute top-[106px] left-[0px] w-[1279px] h-[541px] gap-[32px] horizontal-layout align-left">
           <div className="absolute top-[0px] left-[0px] w-[405px] h-[541px] gap-[24px] vertical-layout align-top align-left">
@@ -162,7 +153,7 @@ export default function HomePage() {
       <section className="relative top-[530px] left-[90px] w-[1280px] h-[304px] gap-[48px]">
         <span className="absolute top-[0px] left-[0px] w-[625px] h-[58px] text-[48px] text-bold align-left align-top"
           style={{ fontWeight: 600, letterSpacing: '-2%' }}>
-          User's Feedback
+          User&apos;s Feedback
         </span>
 
         <div className="absolute top-[106px] left-[0px] w-[1280px] h-[198px] gap-[32px] horizontal-layout">

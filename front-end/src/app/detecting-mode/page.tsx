@@ -6,21 +6,24 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import type { Hands, Results } from "@mediapipe/hands";
+import type { Camera } from "@mediapipe/camera_utils";
 
 const DetectingModePage = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [cameraError, setCameraError] = useState<string | null>(null);
-    const handsRef = useRef<any>(null);
+    const handsRef = useRef<Hands | null>(null);
 
     useEffect(() => {
-        let handsInstance: any, cameraInstance: any;
+        let handsInstance: Hands | null = null;
+        let cameraInstance: Camera | null = null;
 
         const setupHands = async () => {
             const modules = await loadHandsModule();
             if (!modules) return;
 
-            const { Hands, Camera, Draw } = modules;
+            const { Hands, Camera, Draw, HAND_CONNECTIONS } = modules;
             const hands = new Hands({
                 locateFile: (file: string) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
             });
@@ -32,7 +35,7 @@ const DetectingModePage = () => {
                 minTrackingConfidence: 0.5
             });
 
-            hands.onResults((results: any) => {
+            hands.onResults((results: Results) => {
                 const canvas = canvasRef.current;
                 const video = videoRef.current;
                 if (canvas && video) {
@@ -48,12 +51,13 @@ const DetectingModePage = () => {
 
                     if (results.multiHandLandmarks) {
                         for (const landmarks of results.multiHandLandmarks) {
-                            Draw.drawConnectors(ctx, landmarks, Hands.HAND_CONNECTIONS,
+                            Draw.drawConnectors(ctx, landmarks, HAND_CONNECTIONS,
                                 { color: '#00FF00', lineWidth: 2 });
                             Draw.drawLandmarks(ctx, landmarks,
                                 { color: '#FF0000', lineWidth: 1, radius: 2 });
                         }
                     }
+
                     ctx.restore();
                 }
             });
@@ -72,7 +76,7 @@ const DetectingModePage = () => {
             });
 
             cameraInstance = camera;
-            camera.start().catch((err: any) => {
+            camera.start().catch((err: unknown) => {
                 setCameraError('Không thể truy cập webcam. Vui lòng cho phép quyền truy cập camera!');
                 console.error('Lỗi camera:', err);
             });

@@ -30,11 +30,11 @@ const ContactPage = () => {
 
             {/* Contact Us */}
             < section>
-                <span className="absolute top-[290px] left-[90px] text-black w-[1282px] h-[77px]"
+                <span className="relative top-[80px] left-[90px] text-black w-[1282px] h-[77px]"
                     style={{ fontSize: "64px", fontWeight: 700 }}>
                     Contact Us
                 </span>
-                <div className="absolute top-[390px] left-[90px] max-w-[626px] w-full mx-auto p-4 rounded-lg shadow-lg">
+                <div className="relative top-[100px] left-[90px] max-w-[626px] w-full p-4 rounded-lg shadow-lg">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
