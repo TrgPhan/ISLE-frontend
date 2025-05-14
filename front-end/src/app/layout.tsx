@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import '@fontsource/inter';
-import { Inter } from 'next/font/google';
+import { Inter, Jersey_10 } from 'next/font/google';
 import "./globals.css";
 import PageTrans from "@/components/page-trans";
 
 const inter = Inter({
   weight: ['400', '500', '600', '700', '800', '900'],
+  subsets: ['latin']
+})
+
+const jersey10 = Jersey_10({
+  weight: '400',
   subsets: ['latin']
 })
 

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 
 const LoginPage = () => {
-
     return (
         <div className="relative w-[1440px] bg-[#FFFFFF]">
             <Image className='absolute top-[0px] left-0 h-screen'
