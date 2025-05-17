@@ -9,6 +9,7 @@ import Link from "next/link";
 import type { Hands, Results } from "@mediapipe/hands";
 import type { Camera } from "@mediapipe/camera_utils";
 import { X } from "lucide-react"
+import { get } from 'http';
 
 const DetectingModePage = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -19,6 +20,28 @@ const DetectingModePage = () => {
 
     const closePopup = () => {
         setShowPopup(false)
+    }
+
+    // Function to convert landmarks to string, tạm thôi :)))
+    const landmarkstoString = (landmarks: any) => {
+        if (!landmarks) return '';
+        return "abcds4e"
+    }
+
+    function randomword(str: string) {
+        const words = str.split(', ');
+        const randomIndex = Math.floor(Math.random() * words.length);
+        return words[randomIndex];
+    }
+
+    // BE lo hàm này nhé, hàm này là để lấy kết quả dự đoán( do Quân làm ) từ landmarks
+    const getExpectedOutput = (landmarks: any) => {
+        return randomword(landmarkstoString(landmarks));
+    }
+
+    // BE lo hàm này nhé, hàm này là để lấy kết quả riel từ landmarks
+    const getUserOutput = (landmarks: any) => {
+        return randomword(landmarkstoString(landmarks));
     }
 
     useEffect(() => {
@@ -160,7 +183,7 @@ const DetectingModePage = () => {
 
                     <div className="absolute top-[65.32px] left-[0px] w-[367px] h-[224.68px] bg-[#E6E6E6] rounded-lg">
                         <span className="absolute top-[12px] left-[24px] w-[319px] h-[201px] text-[24px] text-black align-left align-top">
-                            Example...
+                            {handsRef.current && getUserOutput(handsRef) ? getUserOutput(handsRef.current) : 'Example...'} { /* để tạm thôi */}
                         </span>
                     </div>
                 </div>
@@ -175,7 +198,7 @@ const DetectingModePage = () => {
 
                     <div className="absolute top-[65.32px] left-[0px] w-[367px] h-[224.68px] bg-[#E6E6E6] rounded-lg">
                         <span className="absolute top-[12px] left-[24px] w-[319px] h-[201px] text-[24px] text-black align-left align-top">
-                            Example...
+                            {handsRef.current && getExpectedOutput(handsRef) ? getExpectedOutput(handsRef.current) : 'Example...'} { /* để tạm thôi */}
                         </span>
                     </div>
                 </div>
